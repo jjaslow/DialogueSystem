@@ -984,6 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f85d1a9f8011847aa06c0cf170a244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSpeakerName: {fileID: 6210151862563861069}
   currentText: {fileID: 6210151861130186594}
   nextButton: {fileID: 6210151862553513106}
   quitButton: {fileID: 6210151862101546597}

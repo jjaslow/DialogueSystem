@@ -144,6 +144,14 @@
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipLocation.cs" />
+    <Compile Include="Assets\Scripts\UI\Quests\QuestToolTipSpawner.cs" />
+    <Compile Include="Assets\Scripts\Quests\Quest.cs" />
+    <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
+    <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
+    <Compile Include="Assets\Scripts\UI\Quests\ObjectiveListUI.cs" />
+    <Compile Include="Assets\Scripts\UI\Quests\ObjectiveItemUI.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestStatus.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
