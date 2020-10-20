@@ -5,15 +5,16 @@ using UnityEngine;
 
 namespace RPG.Quests
 {
-    [System.Serializable]
     public class QuestStatus
     {
-        [SerializeField]
         Quest quest;
-
-        [SerializeField]
         List<string> completedObjectives;
 
+        public QuestStatus(Quest quest)
+        {
+            this.quest = quest;
+            completedObjectives = new List<string>();
+        }
 
         public Quest GetQuest()
         {

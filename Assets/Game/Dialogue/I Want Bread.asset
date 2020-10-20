@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3214350652213022613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: e4673981-d8ad-4fda-98f0-b8859094921f
+  m_EditorClassIdentifier: 
+  text: Sure, how?
+  children:
+  - f76b977a-8ce0-4ed8-af67-c1a8bf5dcae2
+  isPlayerSpeaking: 1
+  rectPosition:
+    serializedVersion: 2
+    x: 240
+    y: 242
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1552545184566774348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: f76b977a-8ce0-4ed8-af67-c1a8bf5dcae2
+  m_EditorClassIdentifier: 
+  text: She needs bread.
+  children: []
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 465
+    y: 242
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: Give Quest
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e81341664088a8468157a48bde72cbe, type: 3}
+  m_Name: I Want Bread
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5893709067047797755}
+  - {fileID: 668424303449781318}
+  - {fileID: -3214350652213022613}
+  - {fileID: -1552545184566774348}
+  newNodeOffset: {x: 225, y: 0}
+--- !u!114 &668424303449781318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 08a9406b-e77c-47f3-aa6d-089acca551af
+  m_EditorClassIdentifier: 
+  text: Im not a doctor.
+  children: []
+  isPlayerSpeaking: 1
+  rectPosition:
+    serializedVersion: 2
+    x: 235
+    y: 10
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5893709067047797755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 965ee955-9499-4192-9be1-bcc92fbe1c1d
+  m_EditorClassIdentifier: 
+  text: Can you help
+  children:
+  - 08a9406b-e77c-47f3-aa6d-089acca551af
+  - e4673981-d8ad-4fda-98f0-b8859094921f
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 10
+    y: 10
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 

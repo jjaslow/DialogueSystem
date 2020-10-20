@@ -2559,9 +2559,9 @@ Transform:
   - {fileID: 2070076265}
   - {fileID: 1328800409}
   - {fileID: 1748164194}
-  - {fileID: 1766277506}
   - {fileID: 1113605396}
   - {fileID: 70898935}
+  - {fileID: 1766277506}
   - {fileID: 130140700}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -4681,6 +4681,47 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1949231364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &740806571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740806570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c46e7680aa1314b8068f60f7a13642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: Give Quest
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 740806572}
+        m_TargetAssemblyTypeName: RPG.Quests.QuestGiver, Assembly-CSharp
+        m_MethodName: AddQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &740806572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740806570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c222f4442a69e51498956412171184d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 5357f22a6c6bc334d8af640d462050dd, type: 2}
 --- !u!114 &740806574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4693,8 +4734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d1f8246dd66f14da4bf7d639f305f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 571d24bdfd380a342af415094ca809d3, type: 2}
-  NPCName: Dumb Guard
+  dialogue: {fileID: 11400000, guid: f21d3c72ed2199c46a3b13bb2ac0c4bf, type: 2}
+  NPCName: Starving Guard
 --- !u!114 &740806580 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5690833133133257728, guid: 97794e8f32d9d574c8ed85db378e8c47,
@@ -6826,7 +6867,7 @@ PrefabInstance:
     - target: {fileID: 1466135209984916882, guid: 97794e8f32d9d574c8ed85db378e8c47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1466135209984916882, guid: 97794e8f32d9d574c8ed85db378e8c47,
         type: 3}
@@ -7882,7 +7923,7 @@ PrefabInstance:
     - target: {fileID: 742165947462440532, guid: cbaae771bb15b2f46aa5c403a45687dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 742165947462440532, guid: cbaae771bb15b2f46aa5c403a45687dc,
         type: 3}
@@ -10411,7 +10452,7 @@ PrefabInstance:
     - target: {fileID: 1466135209984916882, guid: 97794e8f32d9d574c8ed85db378e8c47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1466135209984916882, guid: 97794e8f32d9d574c8ed85db378e8c47,
         type: 3}
@@ -10871,7 +10912,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874861664}
-  m_LocalRotation: {x: 0.15534082, y: -0.06980496, z: 0.011004999, w: 0.9853301}
+  m_LocalRotation: {x: 0.15534082, y: -0.06980496, z: 0.011005, w: 0.9853301}
   m_LocalPosition: {x: 2.15, y: 4.69, z: -2.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13906,7 +13947,7 @@ PrefabInstance:
     - target: {fileID: 5263524460118599961, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.74945
+      value: -644.7999
       objectReference: {fileID: 0}
     - target: {fileID: 5263524460118599961, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
