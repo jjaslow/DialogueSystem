@@ -18,18 +18,22 @@ namespace RPG.Quests
 
         //if a sub class is private, public members are only visible in the parent class
         [System.Serializable]
-        class Reward
+        public class Reward
         {
             public int number;
             public InventoryItem item;
         }
 
+        //needs to be public since we are returning it from a public method below.
         [System.Serializable]
         public class Objective
         {
             public string reference;
             public string description;
         }
+
+
+
 
 
         public Objective[] GetObjectives()
@@ -55,7 +59,10 @@ namespace RPG.Quests
             return objectives.Length;
         }
 
-
+        public List<Reward> GetRewards()
+        {
+            return rewards;
+        }
 
 
 

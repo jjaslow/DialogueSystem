@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Get Me Bread
   m_EditorClassIdentifier: 
   objectives:
-  - reference: Go to mall
-    description: Go to mall q
-  - reference: find baker
-    description: find baker q
-  - reference: Bring to mom
-    description: Bring to mom q
+  - reference: A
+    description: Get Directions to Store
+  - reference: B
+    description: Buy the bread.
   rewards:
   - number: 1
     item: {fileID: 11400000, guid: d64a307491012e543995a2eef4f8cf74, type: 2}
+  - number: 2
+    item: {fileID: 11400000, guid: 8bb0e49a942820a44af61e0ed9f2993c, type: 2}

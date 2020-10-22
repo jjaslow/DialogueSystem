@@ -42,7 +42,7 @@ namespace RPG.Quests
             {
                 if (status.GetQuestName() == questName && HasObjective(status) && !status.GetCompletedObjectives().Contains(objectiveName))
                 {
-                    status.CompleteQuest(objectiveName);
+                    status.CompleteObjective(objectiveName);
                     questList.RefreshQuestList();
                     canDestroy = true;
                 }

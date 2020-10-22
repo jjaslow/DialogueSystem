@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameDevTV.Inventories;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -78,11 +79,38 @@ namespace RPG.Quests
 
 
 
-        public void CompleteQuest(string completedQuest)
+        public void CompleteObjective(string completedObjective)
         {
-            completedObjectives.Add(completedQuest);
+            completedObjectives.Add(completedObjective);
+            CompletedQuest();
         }
 
+        void CompletedQuest()
+        {
+            if (completedObjectives.Count == quest.GetObjectiveCount())
+            {
+                Debug.Log("COMPLETED QUEST");
+                GiveReward();
+            }
+                
+        }
+
+        private void GiveReward()
+        {
+            Inventory inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+
+            foreach(var reward in quest.GetRewards())
+            {
+                int amount = reward.number;
+                InventoryItem item = reward.item;
+
+                bool wasSuccess = inventory.AddToFirstEmptySlot(item, amount);
+                if(!wasSuccess)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<ItemDropper>().DropItem(item, amount);
+                }
+            }
+        }
     }
 
 

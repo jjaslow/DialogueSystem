@@ -12,6 +12,8 @@ public class ObjectiveListUI : MonoBehaviour
     [SerializeField]
     TMP_Text title;
     [SerializeField]
+    TMP_Text rewardText;
+    [SerializeField]
     ObjectiveItemUI objectiveUIButton;
 
 
@@ -31,6 +33,14 @@ public class ObjectiveListUI : MonoBehaviour
 
             item.Setup(obj.description, isComplete);
         }
+
+        rewardText.text = "";
+        foreach(var reward in status.GetQuest().GetRewards())
+        {
+            rewardText.text += reward.number + "x " + reward.item.name + "\n";
+        }
+        if (rewardText.text == "")
+            rewardText.text = "No Reward.";
     }
 
 }

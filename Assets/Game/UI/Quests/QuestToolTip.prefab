@@ -420,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 655379144396708251}
   title: {fileID: 655379146412755882}
+  rewardText: {fileID: 655379145395834310}
   objectiveUIButton: {fileID: 6519118770798505031, guid: 3c18732b6e40f694eb865031a959b161,
     type: 3}
 --- !u!1 &655379145395834304
