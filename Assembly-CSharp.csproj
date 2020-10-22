@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\ItemTooltip.cs" />
     <Compile Include="Assets\Scripts\Dialogue\AIConversant.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\PickupSpawner.cs" />
     <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragSource.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\Scripts\Stats\BaseStats.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipableItem.cs" />
     <Compile Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+    <Compile Include="Assets\Scripts\Quests\QuestObjectiveCompleter.cs" />
     <Compile Include="Assets\Scripts\Inventories\StatsEquipment.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragContainer.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\ActionSlotUI.cs" />
@@ -152,7 +154,6 @@
     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipLocation.cs" />
-    <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />

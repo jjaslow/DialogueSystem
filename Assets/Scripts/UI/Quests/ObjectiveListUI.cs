@@ -21,15 +21,15 @@ public class ObjectiveListUI : MonoBehaviour
 
         parent.DetachChildren();
 
-        foreach (string obj in status.GetQuest().GetObjectives())
+        foreach (var obj in status.GetQuest().GetObjectives())
         {
             ObjectiveItemUI item = Instantiate(objectiveUIButton, parent);
 
             bool isComplete = false;
-            if (status.GetCompletedObjectives().Contains(obj))
+            if (status.GetCompletedObjectives().Contains(obj.reference))
                 isComplete = true;
 
-            item.Setup(obj, isComplete);
+            item.Setup(obj.description, isComplete);
         }
     }
 

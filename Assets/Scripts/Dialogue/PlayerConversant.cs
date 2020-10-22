@@ -64,6 +64,7 @@ namespace RPG.Dialogue
             //else its the AI turn
             DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
 
+            //if a choice doesnt have a next node
             if (children.Length == 0)
             {
                 Quit();

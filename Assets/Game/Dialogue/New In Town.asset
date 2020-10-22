@@ -36,17 +36,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
   m_Name: 7541cf8d-1a28-4711-a29a-7a647a76ff21
   m_EditorClassIdentifier: 
-  text: Don't you worry about it. Say, do you have something to eat? I'm starving
+  text: Don't you worry about it. Say, do you have something to eat? I'm starving.
+    The Mall is that way!
   children: []
   isPlayerSpeaking: 0
   rectPosition:
     serializedVersion: 2
-    x: 904
-    y: 347
+    x: 890
+    y: 452
     width: 200
     height: 125
   onEnterAction: 
-  onExitAction: 
+  onExitAction: CompleteTask
 --- !u!114 &-5159527475519523171
 MonoBehaviour:
   m_ObjectHideFlags: 0
