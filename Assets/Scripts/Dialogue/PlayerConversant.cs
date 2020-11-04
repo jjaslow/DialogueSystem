@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG.Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +54,7 @@ namespace RPG.Dialogue
             TriggerExitAction();
 
             //if player turn we need to list our choices of replies
-            int numPlayerResponses = currentDialogue.GetPlayerChildren(currentNode).Count();
+            int numPlayerResponses = FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode)).Count();
             if(numPlayerResponses>0)
             {
                 isChoosing = true;
@@ -62,7 +63,7 @@ namespace RPG.Dialogue
             }
 
             //else its the AI turn
-            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+            DialogueNode[] children = FilterOnCondition(currentDialogue.GetAIChildren(currentNode)).ToArray();
 
             //if a choice doesnt have a next node
             if (children.Length == 0)
@@ -81,13 +82,13 @@ namespace RPG.Dialogue
 
         public bool HasNext()
         {
-            int len = currentDialogue.GetAllChildren(currentNode).Count();
+            int len = FilterOnCondition(currentDialogue.GetAllChildren(currentNode)).Count();
             return len > 0;
         }
 
         public IEnumerable<DialogueNode> GetChoices()
         {
-            return currentDialogue.GetPlayerChildren(currentNode);
+            return FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode));
 
             //yield return "aaa";
             //yield return "bbb";
@@ -151,6 +152,19 @@ namespace RPG.Dialogue
         }
 
 
+        IEnumerable<DialogueNode> FilterOnCondition(IEnumerable<DialogueNode> inputNodes)
+        {
+            foreach (var node in inputNodes)
+            {
+                if (node.CheckCondition(GetEvaluators()))
+                    yield return node;
+            }
+        }
+
+        private IEnumerable<IPredicateEvaluator> GetEvaluators()
+        {
+            return GetComponents<IPredicateEvaluator>();
+        }
     }
 
 

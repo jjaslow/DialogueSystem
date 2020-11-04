@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7154868917987985849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 89a67a14-2896-4c27-accc-ec805ddf618e
+  m_EditorClassIdentifier: 
+  text: Thank you.
+  children: []
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 470
+    y: 464
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    not: 0
+    parameters: []
 --- !u!114 &-3214350652213022613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,12 +45,17 @@ MonoBehaviour:
   isPlayerSpeaking: 1
   rectPosition:
     serializedVersion: 2
-    x: 240
-    y: 242
+    x: 248
+    y: 148
     width: 200
     height: 125
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: HasQuest
+    not: 1
+    parameters:
+    - Get Me Bread
 --- !u!114 &-1552545184566774348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,12 +73,45 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   rectPosition:
     serializedVersion: 2
-    x: 465
-    y: 242
+    x: 500
+    y: 139
     width: 200
     height: 125
   onEnterAction: 
   onExitAction: Give Quest
+  condition:
+    predicate: 
+    not: 0
+    parameters: []
+--- !u!114 &-333311067277703089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 219c466b-13ae-4251-a853-36cd08d9cee5
+  m_EditorClassIdentifier: 
+  text: I'm already on the case
+  children:
+  - ee4d9fd8-bff1-4f03-91c2-b97966823226
+  isPlayerSpeaking: 1
+  rectPosition:
+    serializedVersion: 2
+    x: 250
+    y: 309
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    not: 0
+    parameters:
+    - Get Me Bread
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +129,38 @@ MonoBehaviour:
   - {fileID: 668424303449781318}
   - {fileID: -3214350652213022613}
   - {fileID: -1552545184566774348}
+  - {fileID: -333311067277703089}
+  - {fileID: 166729648842442558}
+  - {fileID: 7486612396975955327}
+  - {fileID: -7154868917987985849}
   newNodeOffset: {x: 225, y: 0}
+--- !u!114 &166729648842442558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: ee4d9fd8-bff1-4f03-91c2-b97966823226
+  m_EditorClassIdentifier: 
+  text: Thank you, please hurry!
+  children: []
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 458
+    y: 313
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    not: 0
+    parameters: []
 --- !u!114 &668424303449781318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,11 +179,15 @@ MonoBehaviour:
   rectPosition:
     serializedVersion: 2
     x: 235
-    y: 10
+    y: 8
     width: 200
     height: 125
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    not: 0
+    parameters: []
 --- !u!114 &5893709067047797755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,12 +204,47 @@ MonoBehaviour:
   children:
   - 08a9406b-e77c-47f3-aa6d-089acca551af
   - e4673981-d8ad-4fda-98f0-b8859094921f
+  - 219c466b-13ae-4251-a853-36cd08d9cee5
+  - 06badd01-772e-4be0-8a25-02f690a2fa94
   isPlayerSpeaking: 0
   rectPosition:
     serializedVersion: 2
-    x: 10
-    y: 10
+    x: 17
+    y: 12
     width: 200
     height: 125
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    not: 0
+    parameters: []
+--- !u!114 &7486612396975955327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 06badd01-772e-4be0-8a25-02f690a2fa94
+  m_EditorClassIdentifier: 
+  text: I have the bread.
+  children:
+  - 89a67a14-2896-4c27-accc-ec805ddf618e
+  isPlayerSpeaking: 1
+  rectPosition:
+    serializedVersion: 2
+    x: 245
+    y: 465
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasItem
+    not: 0
+    parameters:
+    - 28c6f2e6-46e9-4879-a14f-d6998c781cb7

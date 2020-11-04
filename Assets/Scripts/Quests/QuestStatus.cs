@@ -14,6 +14,7 @@ namespace RPG.Quests
         Quest quest;
         [SerializeField]
         List<string> completedObjectives;
+        bool questCompleted = false;
 
         public QuestStatus(Quest quest)
         {
@@ -90,6 +91,7 @@ namespace RPG.Quests
             if (completedObjectives.Count == quest.GetObjectiveCount())
             {
                 Debug.Log("COMPLETED QUEST");
+                questCompleted = true;
                 GiveReward();
             }
                 
@@ -111,6 +113,14 @@ namespace RPG.Quests
                 }
             }
         }
+
+        public bool GetCompletionStatus()
+        {
+            return questCompleted;
+        }
+
+        
+
     }
 
 

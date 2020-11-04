@@ -1,4 +1,5 @@
 ﻿using GameDevTV.Saving;
+using RPG.Core;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using UnityEngine;
 
 namespace RPG.Quests
 {
-    public class QuestList : MonoBehaviour, ISaveable
+    public class QuestList : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         [SerializeField]
         List<QuestStatus> statuses = new List<QuestStatus>();
@@ -61,6 +62,38 @@ namespace RPG.Quests
             }
         }
 
+        public bool? Evaluate(string predicate, bool not, string[] parameters)
+        {
+            switch (predicate)
+            {
+                case "HasQuest":
+                    return not ? !HasQuest(Quest.GetByName(parameters[0])) : HasQuest(Quest.GetByName(parameters[0]));
+                case "CompletedQuest":
+                    return not ? !QuestCompletedStatus(Quest.GetByName(parameters[0])) : QuestCompletedStatus(Quest.GetByName(parameters[0]));
+            }
+
+            return null;
+        }
+
+        private bool HasQuest(Quest quest)
+        {
+            foreach (var status in statuses)
+            {
+                if (quest.GetTitle() == status.GetQuestName())
+                    return true;
+            }
+            return false;
+        }
+
+        private bool QuestCompletedStatus(Quest quest)
+        {
+            foreach (var status in statuses)
+            {
+                if (quest.GetTitle() == status.GetQuestName())
+                    return status.GetCompletionStatus();
+            }
+            return false;
+        }
 
     }
 

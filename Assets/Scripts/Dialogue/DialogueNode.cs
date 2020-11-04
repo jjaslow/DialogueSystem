@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using RPG.Core;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using UnityEditor;
@@ -119,6 +121,14 @@ namespace RPG.Dialogue
             return onExitAction;
         }
 
+
+        [SerializeField]
+        Condition condition;
+
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
     }
 
 }

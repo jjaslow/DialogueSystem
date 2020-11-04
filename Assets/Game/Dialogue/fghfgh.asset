@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5503428466662600339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 87a8c869-12c0-4e7d-8e9f-605f66b68167
+  m_EditorClassIdentifier: 
+  text: 2
+  children:
+  - 51b07951-395f-4497-ad84-943e5d676a07
+  isPlayerSpeaking: 1
+  rectPosition:
+    serializedVersion: 2
+    x: 210
+    y: 8
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-886231389179091712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: 51b07951-395f-4497-ad84-943e5d676a07
+  m_EditorClassIdentifier: 
+  text: 3
+  children: []
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 425
+    y: 9
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e81341664088a8468157a48bde72cbe, type: 3}
+  m_Name: fghfgh
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1705469266416464563}
+  - {fileID: -5503428466662600339}
+  - {fileID: -886231389179091712}
+  newNodeOffset: {x: 225, y: 0}
+--- !u!114 &1705469266416464563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae2725332276b444ab97497eb657fa7, type: 3}
+  m_Name: dd96af14-72bf-440b-b8ed-dd05fd30eb89
+  m_EditorClassIdentifier: 
+  text: 1
+  children:
+  - 87a8c869-12c0-4e7d-8e9f-605f66b68167
+  isPlayerSpeaking: 0
+  rectPosition:
+    serializedVersion: 2
+    x: 37
+    y: 13
+    width: 200
+    height: 125
+  onEnterAction: 
+  onExitAction: 

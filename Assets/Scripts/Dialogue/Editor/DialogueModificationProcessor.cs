@@ -13,10 +13,11 @@ namespace RPG.Dialogue.Editor
         {
             if (AssetDatabase.LoadMainAssetAtPath(sourcePath) is Dialogue)
             {
+                Debug.Log("renaming a Dialogue");
                 //yes, we are renaming a Dialog SO
 
                 //if renaming then the source and destination path will be the same...
-                if(Path.GetDirectoryName(sourcePath) == Path.GetDirectoryName(destinationPath))
+                if (Path.GetDirectoryName(sourcePath) == Path.GetDirectoryName(destinationPath))
                 {
                     //MOVE HAPPENING, On Dialogue SO, and its a rename, not a directory move
                     Dialogue dialogue = AssetDatabase.LoadMainAssetAtPath(sourcePath) as Dialogue;
